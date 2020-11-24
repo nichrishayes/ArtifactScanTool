@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Brainstorm_ArtifactScanTool'
+project = 'ArtifactScanTool'
 copyright = '2020, Nicholas J. Christopher-Hayes, Alex I. Wiesman'
 author = 'Nicholas J. Christopher-Hayes, Alex I. Wiesman'
 coautho='Brandon Lew'
