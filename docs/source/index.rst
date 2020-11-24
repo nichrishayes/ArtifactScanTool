@@ -41,11 +41,15 @@ Select the type of data you're working with: typically blocks with resting state
 
 .. image:: ims/step004.PNG
 
+Sensor Type
+""""""""
+Select the type of channels you're working with. Designed with Elekta MEGIN Magnetometers and Gradiometers
+
+.. image:: ims/step005.PNG
+
 Log Output
 """"""""
 Select a directory where you'd like the compiled ArtifactScanTool log to be placed
-
-.. image:: ims/step005.PNG
 .. image:: ims/step006.PNG
 
 Artifact Calculation
@@ -68,6 +72,7 @@ Options
 3. Manual
 
 .. image:: ims/step009.PNG
+.. image:: ims/step010.PNG
 
 Sensor Layout
 """"""""
@@ -75,21 +80,21 @@ A topoplot with gradiometer sensor locations will appear.
 
 Note - Currently only Elekta MEGIN gradiometers are plotted. Future releases will include checks for sensor layouts.
 
-.. image:: ims/step010.PNG
+.. image:: ims/step011.PNG
 
 Channel Exclusion Deviation Threshold
 """"""""
 Now enter a deviation cutoff to be applied. This will be standard deviation if "Mean" was selected, or median absolute deviation if "Median" was selected.
 
-.. image:: ims/step011.PNG
+.. image:: ims/step012.PNG
 
 Channel Exlcusion Plotting
 """"""""
 Three figures will popup; one amplitude, one gradient, and one progress report.
 
-.. image:: ims/step012.PNG
 .. image:: ims/step013.PNG
 .. image:: ims/step014.PNG
+.. image:: ims/step015.PNG
 
 Amplitude and Gradient figures will each contain three subplots
 
@@ -116,7 +121,7 @@ Channel Adjustment Decision
 """"""""
 Determine whether you'd like to change channel exclusion method or adjust thresholds, or continue to trial exclusion
 
-.. image:: ims/step015.PNG
+.. image:: ims/step016.PNG
 
 Trial Exclusion Method
 """"""""
@@ -128,22 +133,23 @@ Options
 
 2. Manual
 
-.. image:: ims/step016.PNG
 .. image:: ims/step017.PNG
+.. image:: ims/step018.PNG
 
 Trial Exclusion Deviation Threshold
 """"""""
 Now enter a deviation cutoff to be applied. This will median absolute deviation, because trial exlcusion used median for central tendency to best fit tails of distribution.
 
-.. image:: ims/step018.PNG
+.. image:: ims/step019.PNG
 
 Trial Exclusion Plotting
 """"""""
 Four figures will popup; one amplitude, one gradient, and one progress report.
 
-.. image:: ims/step019.PNG
 .. image:: ims/step020.PNG
 .. image:: ims/step021.PNG
+.. image:: ims/step022.PNG
+.. image:: ims/step023.PNG
 
 Amplitude and Gradient figures will each contain three subplots
 
@@ -172,38 +178,32 @@ Progress Report figure will contain
 4. A table with specific counts (pre and post thresholding) for data blocks/trials. If there are multiple conditions, all will be listed
 
 
-Trial Adjustment Decision
+Trial Adjustment Decision & ArtifactScan Adjustment Decision
 """"""""
 Determine whether you'd like to change trial exclusion method or adjust thresholds
 
-.. image:: ims/step022.PNG
-
-ArtifactScan Adjustment Decision
-""""""""
 Determine whether you'd like to return to the beginning and change channel exclusion method
 
-.. image:: ims/step023.PNG
+.. image:: ims/step024.PNG
+.. image:: ims/step025.PNG
 
 Save Results
 """"""""
 Determine whether you'd like to save results and move on to next subject
 
-.. image:: ims/step024.PNG
-.. image:: ims/step025.PNG
+.. image:: ims/step026.PNG
+.. image:: ims/step027.PNG
 
 Warnings
 """"""""
 Potential warning if data blocks/trials are of different lengths
 
-.. image:: ims/step026.PNG
-
+.. image:: ims/step028.PNG
 
 Log Compilation
 """"""""
 Now go ahead and compile all output logs
 
-.. image:: ims/step027.PNG
-.. image:: ims/step028.PNG
 .. image:: ims/step029.PNG
 .. image:: ims/step030.PNG
 .. image:: ims/step031.PNG
