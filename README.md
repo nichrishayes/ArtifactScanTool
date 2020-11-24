@@ -2,7 +2,7 @@
 ## A MATLAB wrapper program for artifact rejection in the [Brainstorm Software Suite](https://neuroimage.usc.edu/brainstorm/Introduction)
 
 ### Documentation
-[ArtifactScanTool Documentation] (https://brainstorm-artifactscantool.readthedocs.io/en/latest/)
+[ArtifactScanTool Documentation](https://brainstorm-artifactscantool.readthedocs.io/en/latest/)
 
 ### Authors & Affiliations
 Nicholas Christopher-Hayes, [DICON Lab, UNMC](https://diconlab.org/)

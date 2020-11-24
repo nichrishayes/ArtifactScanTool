@@ -20,6 +20,7 @@
 project = 'Brainstorm_ArtifactScanTool'
 copyright = '2020, Nicholas J. Christopher-Hayes, Alex I. Wiesman'
 author = 'Nicholas J. Christopher-Hayes, Alex I. Wiesman'
+coautho='Brandon Lew'
 
 # The full version, including alpha/beta/rc tags
 release = 'version 001.001.001'
