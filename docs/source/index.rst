@@ -6,9 +6,8 @@
 Welcome to Brainstorm_ArtifactScanTool's documentation!
 =======================================================
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
-   usage/quickstart
 
 
 Features
