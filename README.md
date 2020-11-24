@@ -1,4 +1,4 @@
-# Brainstorm_ArtifactScanTool
+# ArtifactScanTool
 ## A MATLAB wrapper program for artifact rejection in the [Brainstorm Software Suite](https://neuroimage.usc.edu/brainstorm/Introduction)
 
 ### Documentation
