@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to Brainstorm_ArtifactScanTool’s documentation! &mdash; Brainstorm_ArtifactScanTool version 001.001.001 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Brainstorm_ArtifactScanTool
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to Brainstorm_ArtifactScanTool’s documentation!</a><ul>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li><a class="reference internal" href="#call-tool">Call Tool</a></li>
+<li><a class="reference internal" href="#data-input">Data Input</a></li>
+<li><a class="reference internal" href="#data-type">Data Type</a></li>
+<li><a class="reference internal" href="#log-output">Log Output</a></li>
+<li><a class="reference internal" href="#artifact-calculation">Artifact Calculation</a></li>
+<li><a class="reference internal" href="#channel-exclusion-method">Channel Exclusion Method</a></li>
+<li><a class="reference internal" href="#sensor-layout">Sensor Layout</a></li>
+<li><a class="reference internal" href="#channel-exclusion-deviation-threshold">Channel Exclusion Deviation Threshold</a></li>
+<li><a class="reference internal" href="#channel-exlcusion-plotting">Channel Exlcusion Plotting</a></li>
+<li><a class="reference internal" href="#channel-adjustment-decision">Channel Adjustment Decision</a></li>
+<li><a class="reference internal" href="#trial-exclusion-method">Trial Exclusion Method</a></li>
+<li><a class="reference internal" href="#trial-exclusion-deviation-threshold">Trial Exclusion Deviation Threshold</a></li>
+<li><a class="reference internal" href="#trial-exclusion-plotting">Trial Exclusion Plotting</a></li>
+<li><a class="reference internal" href="#trial-adjustment-decision">Trial Adjustment Decision</a></li>
+<li><a class="reference internal" href="#artifactscan-adjustment-decision">ArtifactScan Adjustment Decision</a></li>
+<li><a class="reference internal" href="#save-results">Save Results</a></li>
+<li><a class="reference internal" href="#warnings">Warnings</a></li>
+<li><a class="reference internal" href="#log-compilation">Log Compilation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#support">Support</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Brainstorm_ArtifactScanTool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to Brainstorm_ArtifactScanTool’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-brainstorm-artifactscantool-s-documentation">
+<h1>Welcome to Brainstorm_ArtifactScanTool’s documentation!<a class="headerlink" href="#welcome-to-brainstorm-artifactscantool-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Complete Integration with <a class="reference external" href="https://neuroimage.usc.edu/brainstorm/Introduction/">Brainstorm</a></p></li>
+<li><p>Semi-automated exclusion of artifactual channels and epochs (i.e. trials or data blocks)</p></li>
+<li><p>Heatmap and histogram plotting</p></li>
+<li><p>Statical and Manual exclusions</p></li>
+</ul>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="call-tool">
+<h3>Call Tool<a class="headerlink" href="#call-tool" title="Permalink to this headline">¶</a></h3>
+<p>Call the tool from the Matlab command-line</p>
+<img alt="_images/step001.PNG" src="_images/step001.PNG" />
+</div>
+<div class="section" id="data-input">
+<h3>Data Input<a class="headerlink" href="#data-input" title="Permalink to this headline">¶</a></h3>
+<p>Select the subject directories within Brainstorm Database</p>
+<img alt="_images/step002.PNG" src="_images/step002.PNG" />
+<img alt="_images/step003.PNG" src="_images/step003.PNG" />
+</div>
+<div class="section" id="data-type">
+<h3>Data Type<a class="headerlink" href="#data-type" title="Permalink to this headline">¶</a></h3>
+<p>Select the type of data you’re working with: typically blocks with resting state and trials for task-based data</p>
+<img alt="_images/step004.PNG" src="_images/step004.PNG" />
+</div>
+<div class="section" id="log-output">
+<h3>Log Output<a class="headerlink" href="#log-output" title="Permalink to this headline">¶</a></h3>
+<p>Select a directory where you’d like the compiled ArtifactScanTool log to be placed</p>
+<img alt="_images/step005.PNG" src="_images/step005.PNG" />
+<img alt="_images/step006.PNG" src="_images/step006.PNG" />
+</div>
+<div class="section" id="artifact-calculation">
+<h3>Artifact Calculation<a class="headerlink" href="#artifact-calculation" title="Permalink to this headline">¶</a></h3>
+<p>Data will load, and Artifact measures (amplitude and gradient) will be calculated…</p>
+<img alt="_images/step007.PNG" src="_images/step007.PNG" />
+<img alt="_images/step008.PNG" src="_images/step008.PNG" />
+</div>
+<div class="section" id="channel-exclusion-method">
+<h3>Channel Exclusion Method<a class="headerlink" href="#channel-exclusion-method" title="Permalink to this headline">¶</a></h3>
+<p>You will then be prompted to select a central tendency method to remove channels/sensors</p>
+<p>Options</p>
+<ol class="arabic simple">
+<li><p>Mean</p></li>
+<li><p>Median</p></li>
+<li><p>Manual</p></li>
+</ol>
+<img alt="_images/step009.PNG" src="_images/step009.PNG" />
+</div>
+<div class="section" id="sensor-layout">
+<h3>Sensor Layout<a class="headerlink" href="#sensor-layout" title="Permalink to this headline">¶</a></h3>
+<p>A topoplot with gradiometer sensor locations will appear.</p>
+<p>Note - Currently only Elekta MEGIN gradiometers are plotted. Future releases will include checks for sensor layouts.</p>
+<img alt="_images/step010.PNG" src="_images/step010.PNG" />
+</div>
+<div class="section" id="channel-exclusion-deviation-threshold">
+<h3>Channel Exclusion Deviation Threshold<a class="headerlink" href="#channel-exclusion-deviation-threshold" title="Permalink to this headline">¶</a></h3>
+<p>Now enter a deviation cutoff to be applied. This will be standard deviation if “Mean” was selected, or median absolute deviation if “Median” was selected.</p>
+<img alt="_images/step011.PNG" src="_images/step011.PNG" />
+</div>
+<div class="section" id="channel-exlcusion-plotting">
+<h3>Channel Exlcusion Plotting<a class="headerlink" href="#channel-exlcusion-plotting" title="Permalink to this headline">¶</a></h3>
+<p>Three figures will popup; one amplitude, one gradient, and one progress report.</p>
+<img alt="_images/step012.PNG" src="_images/step012.PNG" />
+<img alt="_images/step013.PNG" src="_images/step013.PNG" />
+<img alt="_images/step014.PNG" src="_images/step014.PNG" />
+<p>Amplitude and Gradient figures will each contain three subplots</p>
+<ol class="arabic simple">
+<li><p>Top subplot - fixed color thresholds, no bad channels marked</p></li>
+<li><p>Middle subplot - color thresholds normalized to the active subject, no bad channels marked</p></li>
+<li><p>Bottom subplot - color thresholds normalized to the activee subject, bad channels marked (with max colorbar color value)</p></li>
+</ol>
+<p>Progress Report figure will contain</p>
+<ol class="arabic simple">
+<li><p>The subject identifier</p></li>
+<li><p>Which channel exclusion method was selected</p></li>
+<li><p>Deviation cutoff values</p></li>
+<li><p>A table with specific channel labels and the flag indication (i.e. amplitude, low signal, gradient)</p></li>
+</ol>
+<p>Note - channels with a low signal 10% or more of data blocks/trials will be automatically marked for removal</p>
+</div>
+<div class="section" id="channel-adjustment-decision">
+<h3>Channel Adjustment Decision<a class="headerlink" href="#channel-adjustment-decision" title="Permalink to this headline">¶</a></h3>
+<p>Determine whether you’d like to change channel exclusion method or adjust thresholds, or continue to trial exclusion</p>
+<img alt="_images/step015.PNG" src="_images/step015.PNG" />
+</div>
+<div class="section" id="trial-exclusion-method">
+<h3>Trial Exclusion Method<a class="headerlink" href="#trial-exclusion-method" title="Permalink to this headline">¶</a></h3>
+<p>You will then be prompted to select a central tendency method to remove data blocks/trials</p>
+<p>Options</p>
+<ol class="arabic simple">
+<li><p>Auto</p></li>
+<li><p>Manual</p></li>
+</ol>
+<img alt="_images/step016.PNG" src="_images/step016.PNG" />
+<img alt="_images/step017.PNG" src="_images/step017.PNG" />
+</div>
+<div class="section" id="trial-exclusion-deviation-threshold">
+<h3>Trial Exclusion Deviation Threshold<a class="headerlink" href="#trial-exclusion-deviation-threshold" title="Permalink to this headline">¶</a></h3>
+<p>Now enter a deviation cutoff to be applied. This will median absolute deviation, because trial exlcusion used median for central tendency to best fit tails of distribution.</p>
+<img alt="_images/step018.PNG" src="_images/step018.PNG" />
+</div>
+<div class="section" id="trial-exclusion-plotting">
+<h3>Trial Exclusion Plotting<a class="headerlink" href="#trial-exclusion-plotting" title="Permalink to this headline">¶</a></h3>
+<p>Four figures will popup; one amplitude, one gradient, and one progress report.</p>
+<img alt="_images/step019.PNG" src="_images/step019.PNG" />
+<img alt="_images/step020.PNG" src="_images/step020.PNG" />
+<img alt="_images/step021.PNG" src="_images/step021.PNG" />
+<p>Amplitude and Gradient figures will each contain three subplots</p>
+<ol class="arabic simple">
+<li><p>Top subplot - fixed color thresholds, bad channels marked and no bad trials marked</p></li>
+<li><p>Middle subplot - color thresholds normalized to the active subject, bad channels marked and no bad trials marked</p></li>
+<li><p>Bottom subplot - color thresholds normalized to the activee subject, bad channels marked and bad trials marked (with max colorbar color value)</p></li>
+</ol>
+<p>Trial distribution figure will contain</p>
+<ol class="arabic simple">
+<li><p>Histogram of amplitude values for each trial</p></li>
+<li><p>Historgram of gradient values for each trial</p></li>
+</ol>
+<p>Note - These values are estimated based on the matrix with bad channels removed (i.e. bad channel data are not included in these plots)</p>
+<p>Progress Report figure will contain</p>
+<ol class="arabic simple">
+<li><p>The subject identifier</p></li>
+<li><p>Deviation cutoff values</p></li>
+<li><p>Amplitude and gradient threshold values</p></li>
+<li><p>A table with specific counts (pre and post thresholding) for data blocks/trials. If there are multiple conditions, all will be listed</p></li>
+</ol>
+</div>
+<div class="section" id="trial-adjustment-decision">
+<h3>Trial Adjustment Decision<a class="headerlink" href="#trial-adjustment-decision" title="Permalink to this headline">¶</a></h3>
+<p>Determine whether you’d like to change trial exclusion method or adjust thresholds</p>
+<img alt="_images/step022.PNG" src="_images/step022.PNG" />
+</div>
+<div class="section" id="artifactscan-adjustment-decision">
+<h3>ArtifactScan Adjustment Decision<a class="headerlink" href="#artifactscan-adjustment-decision" title="Permalink to this headline">¶</a></h3>
+<p>Determine whether you’d like to return to the beginning and change channel exclusion method</p>
+<img alt="_images/step023.PNG" src="_images/step023.PNG" />
+</div>
+<div class="section" id="save-results">
+<h3>Save Results<a class="headerlink" href="#save-results" title="Permalink to this headline">¶</a></h3>
+<p>Determine whether you’d like to save results and move on to next subject</p>
+<img alt="_images/step024.PNG" src="_images/step024.PNG" />
+<img alt="_images/step025.PNG" src="_images/step025.PNG" />
+</div>
+<div class="section" id="warnings">
+<h3>Warnings<a class="headerlink" href="#warnings" title="Permalink to this headline">¶</a></h3>
+<p>Potential warning if data blocks/trials are of different lengths</p>
+<img alt="_images/step026.PNG" src="_images/step026.PNG" />
+</div>
+<div class="section" id="log-compilation">
+<h3>Log Compilation<a class="headerlink" href="#log-compilation" title="Permalink to this headline">¶</a></h3>
+<p>Now go ahead and compile all output logs</p>
+<img alt="_images/step027.PNG" src="_images/step027.PNG" />
+<img alt="_images/step028.PNG" src="_images/step028.PNG" />
+<img alt="_images/step029.PNG" src="_images/step029.PNG" />
+<img alt="_images/step030.PNG" src="_images/step030.PNG" />
+<img alt="_images/step031.PNG" src="_images/step031.PNG" />
+<img alt="_images/step032.PNG" src="_images/step032.PNG" />
+</div>
+</div>
+<div class="section" id="support">
+<h2>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h2>
+<p>If you are having issues, please let us know.
+Email Nick: nichrishayes | at | gmail | dot | com</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This software is distributed under the terms of the GNU General Public License as published by the Free Software Foundation. Further details on the GPLv3 license can be found at <a class="reference external" href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Nicholas J. Christopher-Hayes, Alex I. Wiesman
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
