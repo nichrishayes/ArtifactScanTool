@@ -19,49 +19,55 @@ Features
 - Statical and Manual exclusions
 
 
-Getting Started
---------
 
-Call Tool
-""""""""
+Getting Started
+--------------------
+
+Call ArtifactScanTool (via ArtifactScanRejection)
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 Call the tool from the Matlab command-line
 
 .. image:: ims/step001.PNG
 
 Data Input
-""""""""
-Select the subject directories within Brainstorm Database
+"""""""""""
+Select the Brainstorm subject directories for review
+
+
 
 .. image:: ims/step002.PNG
+
 .. image:: ims/step003.PNG
 
 Data Type
-""""""""
-Select the type of data you're working with: typically blocks with resting state and trials for task-based data
+"""""""""""
+Select the data type (typically "blocks" with resting state and "trials" for task-based data)
 
 .. image:: ims/step004.PNG
 
 Sensor Type
-""""""""
-Select the type of channels you're working with. Designed with Elekta MEGIN Magnetometers and Gradiometers
+"""""""""""""
+Select the sensor type (designed with Elekta/MEGIN Mags Grads)
 
 .. image:: ims/step005.PNG
 
 Log Output
-""""""""
-Select a directory where you'd like the compiled ArtifactScanTool log to be placed
+""""""""""""
+Select output log directory path
+
 .. image:: ims/step006.PNG
 
 Artifact Calculation
-""""""""
-Data will load, and Artifact measures (amplitude and gradient) will be calculated...
+""""""""""""""""""""
+Data loading...  Artifact measures (amplitude and gradient) will be calculated...
 
 .. image:: ims/step007.PNG
+
 .. image:: ims/step008.PNG
 
 Channel Exclusion Method
-""""""""
-You will then be prompted to select a central tendency method to remove channels/sensors
+"""""""""""""""""""""""""""
+Select a central tendency method to remove channels/sensors
 
 Options
 
@@ -72,28 +78,29 @@ Options
 3. Manual
 
 .. image:: ims/step009.PNG
+
 .. image:: ims/step010.PNG
 
 Sensor Layout
-""""""""
-A topoplot with gradiometer sensor locations will appear.
-
-Note - Currently only Elekta MEGIN gradiometers are plotted. Future releases will include checks for sensor layouts.
+"""""""""""""""
+Gradiometer topoplot (with sensor labels, Elekta/MEGIN GRADS only)
 
 .. image:: ims/step011.PNG
 
 Channel Exclusion Deviation Threshold
-""""""""
+"""""""""""""""""""""""""""""""""""""""
 Now enter a deviation cutoff to be applied. This will be standard deviation if "Mean" was selected, or median absolute deviation if "Median" was selected.
 
 .. image:: ims/step012.PNG
 
 Channel Exlcusion Plotting
-""""""""
-Three figures will popup; one amplitude, one gradient, and one progress report.
+"""""""""""""""""""""""""""
+Three figures will popup; one amplitude, one gradient, and one progress report
 
 .. image:: ims/step013.PNG
+
 .. image:: ims/step014.PNG
+
 .. image:: ims/step015.PNG
 
 Amplitude and Gradient figures will each contain three subplots
@@ -112,20 +119,20 @@ Progress Report figure will contain
 
 3. Deviation cutoff values
 
-4. A table with specific channel labels and the flag indication (i.e. amplitude, low signal, gradient)
+4. Bad channels (i.e. tag included for amplitude, low signal, gradient)
 
 Note - channels with a low signal 10% or more of data blocks/trials will be automatically marked for removal
 
 
 Channel Adjustment Decision
-""""""""
+""""""""""""""""""""""""""""""
 Determine whether you'd like to change channel exclusion method or adjust thresholds, or continue to trial exclusion
 
 .. image:: ims/step016.PNG
 
 Trial Exclusion Method
-""""""""
-You will then be prompted to select a central tendency method to remove data blocks/trials
+"""""""""""""""""""""""
+You will then be prompted to select a trial rejection method to remove data blocks/trials
 
 Options
 
@@ -134,21 +141,25 @@ Options
 2. Manual
 
 .. image:: ims/step017.PNG
+
 .. image:: ims/step018.PNG
 
 Trial Exclusion Deviation Threshold
-""""""""
-Now enter a deviation cutoff to be applied. This will median absolute deviation, because trial exlcusion used median for central tendency to best fit tails of distribution.
+""""""""""""""""""""""""""""""""""""
+Enter deviation value (MAD, trial exlcusion uses median for central tendency to best fit tails of distribution)
 
 .. image:: ims/step019.PNG
 
 Trial Exclusion Plotting
-""""""""
+""""""""""""""""""""""""
 Four figures will popup; one amplitude, one gradient, and one progress report.
 
 .. image:: ims/step020.PNG
+
 .. image:: ims/step021.PNG
+
 .. image:: ims/step022.PNG
+
 .. image:: ims/step023.PNG
 
 Amplitude and Gradient figures will each contain three subplots
@@ -179,34 +190,39 @@ Progress Report figure will contain
 
 
 Trial Adjustment Decision & ArtifactScan Adjustment Decision
-""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Determine whether you'd like to change trial exclusion method or adjust thresholds
 
 Determine whether you'd like to return to the beginning and change channel exclusion method
 
 .. image:: ims/step024.PNG
+
 .. image:: ims/step025.PNG
 
 Save Results
-""""""""
-Determine whether you'd like to save results and move on to next subject
+"""""""""""""
+Save and proceed to next subject
 
 .. image:: ims/step026.PNG
+
 .. image:: ims/step027.PNG
 
 Warnings
-""""""""
+""""""""""
 Potential warning if data blocks/trials are of different lengths
 
 .. image:: ims/step028.PNG
 
 Log Compilation
-""""""""
+"""""""""""""""""
 Now go ahead and compile all output logs
 
 .. image:: ims/step029.PNG
+
 .. image:: ims/step030.PNG
+
 .. image:: ims/step031.PNG
+
 .. image:: ims/step032.PNG
 
 
