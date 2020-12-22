@@ -10,5 +10,8 @@ Alex Wiesman, [neuroSPEEDMcGill, McGill](https://www.mcgill.ca/bic/research/neur
 Brandon Lew, [DICON Lab, UNMC](https://diconlab.org/)
 Tony Wilson, [DICON Lab, UNMC](https://diconlab.org/)
 
+###Date
+(11/2020)
+
 ### Licensing
 This software is distributed under the terms of the GNU General Public License as published by the Free Software Foundation. Further details on the GPLv3 license can be found at http://www.gnu.org/copyleft/gpl.html.
