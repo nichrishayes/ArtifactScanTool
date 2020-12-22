@@ -20,7 +20,7 @@
 project = 'ArtifactScanTool'
 copyright = '2020, Nicholas J. Christopher-Hayes, Alex I. Wiesman'
 author = 'Nicholas J. Christopher-Hayes, Alex I. Wiesman'
-coautho='Brandon Lew'
+coauthor='Brandon J. Lew, Tony W. Wilson'
 
 # The full version, including alpha/beta/rc tags
 release = 'version 001.001.001'
