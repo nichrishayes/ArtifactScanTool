@@ -100,12 +100,17 @@ function h = bst_ast_display_heatmap(heatmap_data, mapMax, mapMin, title, bad_ch
         
     % else there are not bad channels to be marked out
     else
+        % get row indeces of bad channels %
+        meg_labels_v2 = meg_labels_v1(meg_labels_v1_sort)';
+        trial_labels_v2 = trial_labels_v1(trial_labels_v1_sorted)';
+        
         filter_data_Condition_heatmap_trials_blocked = filter_data_Condition_heatmap_channels_blocked;
         
         % get max for each column(trial), last row is the max
         filter_data_Condition_heatmap_trials_blocked(end+1, :) = max(filter_data_Condition_heatmap_trials_blocked, [], 1);
         
         trial_labels_v3 = trial_labels_v2;
+        trial_labels_v2_sorted = trial_labels_v1_sorted;
     end
         
         
@@ -123,12 +128,19 @@ function h = bst_ast_display_heatmap(heatmap_data, mapMax, mapMin, title, bad_ch
         filter_data_Condition_heatmap_trials_blocked(:,bad_trial_columns_v1) = repmat(max(filter_data_Condition_heatmap_trials_blocked,[],'all'),...
             size(filter_data_Condition_heatmap_trials_blocked,1), size(bad_trial_columns_v1,2));
         
-        % re add bad channels to top rows %
-        filter_data_Condition_heatmap_trials_blocked = [filter_data_Condition_heatmap_channels_blocked(bad_channel_rows_v1,:); filter_data_Condition_heatmap_trials_blocked];
-        
+        if exist('bad_channel_rows_v1','var')
+            % re add bad channels to top rows %
+            filter_data_Condition_heatmap_trials_blocked = [filter_data_Condition_heatmap_channels_blocked(bad_channel_rows_v1,:); filter_data_Condition_heatmap_trials_blocked];
+        end
+            
+            
     else
-        % re add bad channels to top rows, also dropping trial max from last row %
-        filter_data_Condition_heatmap_trials_blocked = [filter_data_Condition_heatmap_channels_blocked(bad_channel_rows_v1,:); filter_data_Condition_heatmap_trials_blocked(1:end-1,:)];
+        if exist('bad_channel_rows_v1','var')
+            % re add bad channels to top rows, also dropping trial max from last row %
+            filter_data_Condition_heatmap_trials_blocked = [filter_data_Condition_heatmap_channels_blocked(bad_channel_rows_v1,:); filter_data_Condition_heatmap_trials_blocked(1:end-1,:)];
+        else
+            filter_data_Condition_heatmap_trials_blocked = filter_data_Condition_heatmap_trials_blocked(1:end-1,:);
+        end
     end
     
     % plot raw data without channels or trials blocked %

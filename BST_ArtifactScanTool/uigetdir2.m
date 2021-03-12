@@ -12,7 +12,7 @@
 
 function [pathname] = uigetdir2(start_path, dialog_title)
 import javax.swing.JFileChooser;
-if nargin == 0 || start_path == '' || start_path == 0 % Allow a null argument.
+if nargin == 0 || isempty(start_path) %| start_path == 0 % Allow a null argument.
     start_path = pwd;
 end
 jchooser = javaObjectEDT('javax.swing.JFileChooser', start_path);

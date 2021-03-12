@@ -21,8 +21,6 @@ waitfor(msgbox(sprintf("%s\n\nClick OK to proceed", disp_str),'Brainstorm: Subje
 
 filedirs = uigetdir2;
 filedirs = cellfun(@(SSS) dir(SSS), filedirs, 'UniformOutput', false);
-%filedirs=dir(fullfile('D:\CHAIN_Pilot\CHAIN_LTM\brainstorm_ltm_db\CHAIN_LTM\data\sub*'));
-%filedirs=dir(fullfile('/Users/nichrishayes2/Desktop/bs_db/data/sub*4*'));
 
 %determine data type to processes
 %user specification re: GRADS or MAGS
@@ -34,7 +32,7 @@ elseif contains(method,'trial')
 else
     error('Data Type Not Selected!');
 end
-
+% data_type = 'trial';
 
 %user specification re: GRADS or MAGS
 method = questdlg('What type of sensors?','Sensor Type','GRADs','MAGs','All','GRADs');
@@ -47,11 +45,10 @@ elseif strcmp(method,'All')
 else
     error('Sensor Type Not Selected!');
 end
+% sensor_type = 'MEG GRAD';
 
 %user specification re: directory for writing CSV log files
 log_path = uigetdir(pwd,'Please select destination directory for CSV log files.');
-%log_path = '/Users/nichrishayes2/Desktop';
-%log_path = 'C:\Users\nebmeg\Desktop';
 
 for d = 1:size(filedirs,2)
     % all trial.mat files for a directory %
@@ -123,8 +120,16 @@ for d = 1:size(filedirs,2)
     trial_labels(contains(trial_labels, '('))=[];
     trial_fnames = {sub_data_mats.name};
     trial_fpaths = {sub_data_mats.folder};
-    trial_dat_sizes = cellfun(@(SSS) size(SSS.F), trial_dat, 'UniformOutput', false);
+    %build index of trials that match prev_bad_trials
+    use_trial_ind = ~ismember(trial_fnames,prev_bad_trials);
+    %this is what we'll use
+    trial_dat_no_prev_bad=trial_dat(use_trial_ind);
+    
+    trial_dat_sizes = cellfun(@(SSS) size(SSS.F), trial_dat_no_prev_bad, 'UniformOutput', false);
     trial_dat_sizes = vertcat(trial_dat_sizes{:});
+    
+    
+    
 
     if any(any(logical(diff(trial_dat_sizes)),2))
         warning('These epochs are different than the others for %s! Skipping!', subID);
@@ -145,14 +150,15 @@ for d = 1:size(filedirs,2)
 
     % check each trial file and exlude channels from use_channel_ind that are excluded from any trial
     % should this be ==0 or ==-1???
-    use_channel_ind(1, any(cell2mat(cellfun(@(SSS) SSS.ChannelFlag, trial_dat, 'UniformOutput', false))==-1, 2)')=false;
-    output_channel_flags = any(cell2mat(cellfun(@(SSS) SSS.ChannelFlag, trial_dat, 'UniformOutput', false))==-1, 2)';
+    use_channel_ind(1, any(cell2mat(cellfun(@(SSS) SSS.ChannelFlag, trial_dat_no_prev_bad, 'UniformOutput', false))==-1, 2)')=false;
+    output_channel_flags = any(cell2mat(cellfun(@(SSS) SSS.ChannelFlag, trial_dat_no_prev_bad, 'UniformOutput', false))==-1, 2)';
     
     % add trial data to compiler
     %trial_dat_compiled = cellfun(@(SSS) SSS.F, trial_dat, 'UniformOutput', false);
     waitbar(.75,wbar,sprintf('Computing epoch data for ArtifactScanTool: %s',subID));
-    for t=1:size(trial_dat,2)
-        trial_dat_compiled(:,:,t)=trial_dat{t}.F;
+    
+    for t=1:size(trial_dat_no_prev_bad,2)
+        trial_dat_compiled(:,:,t)=trial_dat_no_prev_bad{t}.F;
     end
     
     
@@ -166,10 +172,6 @@ for d = 1:size(filedirs,2)
     gradient_res = 1;
     
 
-    %build index of trials that match prev_bad_trials
-    use_trial_ind = ~ismember(trial_fnames,prev_bad_trials);
-    
-
     % create Artifact Estimation Data
     % max for each 
     maxes = squeeze(max(trial_dat_compiled,[],2));
@@ -180,9 +182,9 @@ for d = 1:size(filedirs,2)
     low_sig = p2p < 40e-15;
 
     % Prepare data for ArtifactScanTool
-    output_p2p = p2p(use_channel_ind,use_trial_ind)';
-    output_gradients = gradients(use_channel_ind,use_trial_ind)';
-    output_low_sig = low_sig(use_channel_ind,use_trial_ind)';
+    output_p2p = p2p(use_channel_ind,:)';
+    output_gradients = gradients(use_channel_ind,:)';
+    output_low_sig = low_sig(use_channel_ind,:)';
     output_trial_labels = trial_labels(1,use_trial_ind)';
     output_channel_names = channel_names(use_channel_ind);
     output_trial_fnames = trial_fnames(use_trial_ind)';
