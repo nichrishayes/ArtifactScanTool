@@ -2,7 +2,9 @@
 %trial data from a set of Brainstorm subject directories
 %                   2) Send these metrics to BST_ArtifactScanTool.m for GUI-based trial rejection
 %                   3) Use resulting thresholds to mark new bad trials/channels
-%
+%INPUT:             raw_search_patt: a character vector in single quotes ''
+%                   with a unique pattern to narrow where in subject
+%                   folders your epoched data live
 %
 %AUTHORS:            Alex Wiesman, Nick Christopher-Hayes
 %VERSION HISTORY:    07/23/2020  v1: First working version
@@ -10,11 +12,14 @@
 %%select all parent directories to consider%%
 
 
-function bst_ArtifactRejection
+function bst_ArtifactRejection(raw_search_patt)
 % Start brainstorm in background
 %brainstorm nogui
 
-raw_search_patt = 'notch_band';
+%raw_search_patt = 'notch_band';
+if nargin ~= 1
+    error('You must enter a unique search pattern tied to your epoched data.');
+end
 
 disp_str = sprintf('Select the Brainstorm Database subject directories to run:');
 waitfor(msgbox(sprintf("%s\n\nClick OK to proceed", disp_str),'Brainstorm: Subject Directories', 'replace'));
@@ -58,6 +63,7 @@ for d = 1:size(filedirs,2)
     
     % collect subject channel file and load it
     channel_mat = dir(fullfile(filedirs{d}(1).folder, '*', '*channel*.mat'));
+    channel_mat = channel_mat(~contains({channel_mat.folder},'@raw'));
     
     if isempty(channel_mat) || size(channel_mat,1) > 1
         [channel_mat_f,channel_mat_p] = uigetfile('*.mat',sprintf('Select Brainstorm channel file for %s',subID), filedirs{d}(1).folder);
