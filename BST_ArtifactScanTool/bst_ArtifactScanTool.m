@@ -107,11 +107,7 @@ all_grad_data = output_gradients*10000000000000;
 
 
 % Build combined matrices : 1 is the asci values for letters i(condition index)%
-try
-    all_amp_data = [55573,channel_labels;55573,bad_channels;all_condition_number_pairs,all_amp_data];
-catch
-    error('Hold the door - re-run and it will work. No idea why yet.');
-end
+all_amp_data = [55573,channel_labels;55573,bad_channels;all_condition_number_pairs,all_amp_data];
 all_grad_data = [55573,channel_labels;55573,bad_channels;all_condition_number_pairs,all_grad_data];
 
 

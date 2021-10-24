@@ -199,6 +199,7 @@ for d = 1:size(filedirs,2)
     delete(wbar);
     %waitbar(.99,wbar,sprintf('Compiling and calculating epoch data for ArtifactScanTool: %s',subID));
     [~,output_channel_names_remove,~,~,~,output_trial_fnames_remove] = bst_ArtifactScanTool(output_p2p,output_gradients,output_trial_labels,output_channel_names,output_trial_fnames,sensor_type,subID,log_path);
+    clearvars trial_dat_compiled
     
     wbar = waitbar(.25,sprintf('Saving ArtifactScanTool Results: %s',subID));
     % add all trials in 'output_trial_fnames_remove' into the 'BadTrials' field of the 'brainstormstudy.mat' file
