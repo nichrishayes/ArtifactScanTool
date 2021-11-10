@@ -5,10 +5,10 @@
 [ArtifactScanTool Documentation](https://brainstorm-artifactscantool.readthedocs.io/en/latest/)
 
 ### Authors & Affiliations
-Nicholas Christopher-Hayes, [DICON Lab, UNMC](https://diconlab.org/)
+Nicholas Christopher-Hayes, [MADLab, UC Davis](https://nichrishayes.github.io/contact/), [DICON Lab, UNMC](https://diconlab.org/)
 Alex Wiesman, [neuroSPEEDMcGill, McGill](https://www.mcgill.ca/bic/research/neurospeed-neural-dynamics-brain-systems-baillet/people)
 Brandon Lew, [DICON Lab, UNMC](https://diconlab.org/)
-Tony Wilson, [DICON Lab, UNMC](https://diconlab.org/)
+Tony Wilson, [DICON Lab, Institute for Human Neuroscience, Boys Town National Research Hospital ](https://diconlab.org/)
 
 ###Date
 (11/2020)
